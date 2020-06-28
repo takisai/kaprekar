@@ -1,0 +1,33 @@
+<!--
+Copyright (c) 2020 takisai
+Released under the MIT license
+https://opensource.org/licenses/mit-license.php
+-->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>N進カプレカ数サーチ</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>N進カプレカ数サーチ</h1>
+        <form name="input">
+            検索範囲: <input type="text" id="number_begin" name="number_begin" autocomplete="off" class="background-color_pink"> ～ <input type="text" id="number_end" name="number_end" autocomplete="off" class="background-color_pink"><br>
+            基数範囲: <input type="text" id="base_begin" name="base_begin" autocomplete="off" value="2"> ～ <input type="text" id="base_end" name="base_end" autocomplete="off"><br>
+            <input type="button" value="検索" onclick="send()">
+        </form>
+        <hr>
+        <ul id="result">
+        </ul>
+        <hr>
+        <h2>カプレカ数とは</h2>
+        <p>各桁を並び替えて、最大にしたものから最小にしたものの差が元の値に等しくなる正の整数を指します。</p>
+        <a href="https://www.google.com/search?q=%E3%82%AB%E3%83%97%E3%83%AC%E3%82%AB%E6%95%B0" target="_blank">カプレカ数 - Google 検索</a>
+        <p>ここでは、N進法で表記したときにカプレカ数になるものをN進カプレカ数と呼びます。</p>
+        <h2>検索結果の読み方</h2>
+        <p>等号の左側の数値は十進法で、右側の数値はN進数による表現です。例えば「&lt;7&gt;&lt;15&gt;&lt;8&gt;<sub>16</sub>」は「十六進法で七を表す文字の次に、十五を表す文字、八を表す文字が並んでいること」を表しています(いわゆる「7F8<sub>16</sub>」)。</p>
+        <script src="main.js"></script>
+    </body>
+</html>
